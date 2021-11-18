@@ -15,10 +15,10 @@ function App() {
   //   )
   // }
 
-  fetch("https://api.openweathermap.org/data/2.5/forecast?q=Sunnyvale&appid=b20a0c8394f0e460f879d6303c6f83ca")
+  fetch("https://api.openweathermap.org/data/2.5/forecast?q=Sunnyvale&appid=b20a0c8394f0e460f879d6303c6f83ca&&units=metric")
   .then((response) => response.json()
   .then((data) => {
-      console.log(data)
+      setWeather(data.list[0].main.temp_min + "," + data.list[0].main.temp_max)
     })
   )
 }
@@ -30,6 +30,7 @@ function App() {
       </header>
       <body>
         <button onClick={getWeather}>Get your Weather Right Now</button>
+        {weather}
       </body>
     </div>
   );
