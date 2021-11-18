@@ -8,12 +8,20 @@ function App() {
 
   const getWeather = () => {
 
-    Axios.get("https://api.openweathermap.org/data/2.5/forecast?q=Sunnyvale&appid=b20a0c8394f0e460f879d6303c6f83ca").then(
-      (response) => {
-        console.log(response)
-      }
-    )
-  }
+  //   Axios.get("https://api.openweathermap.org/data/2.5/forecast?q=Sunnyvale&appid=b20a0c8394f0e460f879d6303c6f83ca").then(
+  //     (response) => {
+  //       console.log(response)
+  //     }
+  //   )
+  // }
+
+  fetch("https://api.openweathermap.org/data/2.5/forecast?q=Sunnyvale&appid=b20a0c8394f0e460f879d6303c6f83ca")
+  .then((response.json())
+  .then((data) => {
+      console.log(response)
+    })
+  )
+}
 
   return (
     <div className="App">
