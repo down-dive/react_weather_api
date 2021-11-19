@@ -29,7 +29,7 @@ function App() {
         <h1>React Weather API</h1>
       </header>
       <body className="App-body">
-        <p>Testing CSS flexbox</p>
+        {/* <p>Testing CSS flexbox</p> */}
         <button className="App-button" onClick={getWeather}>Get your Weather Right Now</button>
         {weather}
       </body>
