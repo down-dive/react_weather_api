@@ -1,4 +1,3 @@
-import { Axios } from 'axios';
 import './App.css';
 import {useState} from 'react';
 
@@ -8,12 +7,8 @@ function App() {
 
   const getWeather = () => {
 
-  //   Axios.get("https://api.openweathermap.org/data/2.5/forecast?q=Sunnyvale&appid=b20a0c8394f0e460f879d6303c6f83ca").then(
-  //     (response) => {
-  //       console.log(response)
-  //     }
-  //   )
-  // }
+
+
 
   // fetch("https://api.openweathermap.org/data/2.5/forecast?q=Sunnyvale&appid=b20a0c8394f0e460f879d6303c6f83ca&&units=metric")
   // .then((response) => response.json()
@@ -43,6 +38,7 @@ function App() {
 
         <div className="weather-1">Today's weather:</div>
         <div>{weather}</div>
+        <icon src= "http://openweathermap.org/img/wn/10d@2x.png"></icon>
       </body>
     </div>
   );
