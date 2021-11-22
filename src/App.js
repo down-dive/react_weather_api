@@ -15,13 +15,22 @@ function App() {
   //   )
   // }
 
-  fetch("https://api.openweathermap.org/data/2.5/forecast?q=Sunnyvale&appid=b20a0c8394f0e460f879d6303c6f83ca&&units=metric")
+  // fetch("https://api.openweathermap.org/data/2.5/forecast?q=Sunnyvale&appid=b20a0c8394f0e460f879d6303c6f83ca&&units=metric")
+  // .then((response) => response.json()
+  // .then((data) => {
+  //     setWeather(Math.round(data.list[0].main.temp_min )+ "," + Math.round(data.list[0].main.temp_max) + "," + data.list[0].weather.icon)
+  //     console.log(data.list[0].weather[0].icon)
+  //   })
+  // )
+// }
+  fetch("http://openweathermap.org/img/wn/10d@2x.png")
   .then((response) => response.json()
   .then((data) => {
-      setWeather(Math.round(data.list[0].main.temp_min )+ "," + Math.round(data.list[0].main.temp_max))
+      setWeather(data)
     })
   )
 }
+
 
   return (
     <div className="App">
