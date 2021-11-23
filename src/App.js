@@ -19,14 +19,6 @@ function App() {
     })
   )
 }
-//   fetch("http://openweathermap.org/img/wn/10d@2x.png")
-//   .then((response) => response.json()
-//   .then((data) => {
-//       setWeather(data)
-//     })
-//   )
-// }
-
 
   return (
     <div className="App">
