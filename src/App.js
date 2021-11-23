@@ -1,5 +1,6 @@
 import './App.css';
 import {useState} from 'react';
+// var iconCode = data.list[0].weather[0].icon;
 
 function App() {
   const [weather, setWeather] = useState("");
@@ -10,21 +11,21 @@ function App() {
 
 
 
-  // fetch("https://api.openweathermap.org/data/2.5/forecast?q=Sunnyvale&appid=b20a0c8394f0e460f879d6303c6f83ca&&units=metric")
-  // .then((response) => response.json()
-  // .then((data) => {
-  //     setWeather(Math.round(data.list[0].main.temp_min )+ "," + Math.round(data.list[0].main.temp_max) + "," + data.list[0].weather.icon)
-  //     console.log(data.list[0].weather[0].icon)
-  //   })
-  // )
-// }
-  fetch("http://openweathermap.org/img/wn/10d@2x.png")
+  fetch("https://api.openweathermap.org/data/2.5/forecast?q=Sunnyvale&appid=b20a0c8394f0e460f879d6303c6f83ca&&units=metric")
   .then((response) => response.json()
   .then((data) => {
-      setWeather(data)
+      setWeather(Math.round(data.list[0].main.temp_min )+ "," + Math.round(data.list[0].main.temp_max) + "," + data.list[0].weather.icon)
+      console.log(data.list[0].weather[0].icon)
     })
   )
 }
+//   fetch("http://openweathermap.org/img/wn/10d@2x.png")
+//   .then((response) => response.json()
+//   .then((data) => {
+//       setWeather(data)
+//     })
+//   )
+// }
 
 
   return (
@@ -38,7 +39,7 @@ function App() {
 
         <div className="weather-1">Today's weather:</div>
         <div>{weather}</div>
-        <icon src= "http://openweathermap.org/img/wn/10d@2x.png"></icon>
+        <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
       </body>
     </div>
   );
