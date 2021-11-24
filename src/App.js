@@ -1,9 +1,10 @@
 import './App.css';
 import {useState} from 'react';
-// var iconCode = data.list[0].weather[0].icon;
+
 
 function App() {
   const [weather, setWeather] = useState("");
+  const [icon, setIcon] = useState("")
 
 
   const getWeather = () => {
@@ -13,6 +14,9 @@ function App() {
   .then((data) => {
       setWeather(Math.round(data.list[0].main.temp_min )+ "," + Math.round(data.list[0].main.temp_max))
       console.log(data.list[0].weather[0].icon)
+    })
+    .then((data) => {
+      setIcon
     })
   )
 }
