@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { render } from '@testing-library/react';
 
 
@@ -39,21 +39,42 @@ import { render } from '@testing-library/react';
 //   );
 // }
 
-// export default App;
+let data
+let temp
 
-class WeatherPage extends React.Component {
-constructor(props) {
-  super(props);
+class App extends React.Component {
+  constructor(props) {
+    super(props);
 
-  this.state = {
+      const getWeather = () => {
 
-  }
-}
-render() {
-  return(
-    <div>
-      
-    </div>
+  let apiURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + "Sunnyvale"+ "&units=imperial&exclude=,daily&appid=b20a0c8394f0e460f879d6303c6f83ca"
+
+  fetch(apiURL)
+  // fetch("https://api.openweathermap.org/data/2.5/forecast?q=Sunnyvale&appid=b20a0c8394f0e460f879d6303c6f83ca&&units=metric")
+  .then((response) => response.json()
+  .then((data) => {
+      // setWeather(Math.round(data.list[0].main.temp_min )+ "," + Math.round(data.list[0].main.temp_max))
+      console.log(data.list[0].weather[0].icon)
+      let temp = data.list[0].main.temp_min
+    })
+    // .then((data) => {
+    //   setIcon(data.list[0].weather[0].icon)
+    // })
   )
 }
+
+    this.state = {
+      dayOne: temp
+    }
+  }
+  render() {
+    return (
+      <div>
+        <p>{this.state.dayOne}</p>
+      </div>
+    )
+  }
 }
+
+export default App;
