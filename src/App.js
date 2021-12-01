@@ -56,13 +56,16 @@ class App extends React.Component {
   .then((data) => {
       // setWeather(Math.round(data.list[0].main.temp_min )+ "," + Math.round(data.list[0].main.temp_max))
       console.log(data.list[0].weather[0].icon)
-      let temp = data.list[0].main.temp_min
+      let minTemp = data.list[0].main.temp_min
+      console.log(minTemp)
     })
     // .then((data) => {
     //   setIcon(data.list[0].weather[0].icon)
     // })
   )
 }
+getWeather()
+const icon = wInfo.weather[0].icon; // For instance "09d"
 
     this.state = {
       dayOne: temp
@@ -72,6 +75,8 @@ class App extends React.Component {
     return (
       <div>
         <p>{this.state.dayOne}</p>
+       
+<Image source={{ uri: `http://openweathermap.org/img/w/${icon}.png` }} />
       </div>
     )
   }
