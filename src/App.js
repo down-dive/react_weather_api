@@ -40,7 +40,7 @@ import { render } from '@testing-library/react';
 // }
 
 let data
-let temp
+
 
 class App extends React.Component {
   constructor(props) {
