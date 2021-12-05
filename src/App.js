@@ -59,14 +59,14 @@ class App extends React.Component {
       let minTemp = data.list[0].main.temp_min
       console.log(minTemp)
     })
-    // .then((data) => {
+    // .then((data) => {f
     //   setIcon(data.list[0].weather[0].icon)
     // })
   )
   
 }
 getWeather()
-const icon = wInfo.weather[0].icon; // For instance "09d"
+// const icon = wInfo.weather[0].icon; // For instance "09d"
 
     this.state = {
       dayOne: temp
@@ -77,7 +77,7 @@ const icon = wInfo.weather[0].icon; // For instance "09d"
       <div>
         <p>{this.state.dayOne}</p>
        
-<Image source={{ uri: `http://openweathermap.org/img/w/${icon}.png` }} />
+{/* <Image source={{ uri: `http://openweathermap.org/img/w/${icon}.png` }} /> */}
       </div>
     )
   }
