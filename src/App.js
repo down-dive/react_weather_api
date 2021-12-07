@@ -71,7 +71,7 @@ getWeather()
 // const icon = wInfo.weather[0].icon; // For instance "09d"
 
     this.state = {
-      dayOne: temp
+      dayOne: "Hello"
     }
   }
   render() {
