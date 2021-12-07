@@ -41,7 +41,6 @@ import { render } from '@testing-library/react';
 //   );
 // }
 
-let data
 
 
 class App extends React.Component {
