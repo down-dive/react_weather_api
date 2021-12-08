@@ -65,6 +65,7 @@ class App extends React.Component {
   )
   
 }
+
 getWeather()
 // const icon = wInfo.weather[0].icon; // For instance "09d"
 
